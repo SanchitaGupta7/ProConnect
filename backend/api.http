@@ -1,0 +1,58 @@
+POST http://localhost:9090/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "test2",
+    "password": "test2",
+    "email": "test2",
+    "name": "test2"
+}
+
+###
+
+POST http://localhost:9090/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "test",
+    "password": "test"
+}
+
+###
+
+POST http://localhost:9090/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "test2",
+    "password": "test2"
+}
+
+###
+
+GET http://localhost:9090/get_user_and_profile HTTP/1.1
+Content-Type: application/json
+
+{
+    "token" : "d4212e0fa3825e031524f4a386e23edae477f31e26b504edb5358510b8cca62e"
+}
+
+###
+
+POST http://localhost:9090/update_profile_data HTTP/1.1
+Content-Type: application/json
+
+{
+    "token" : "d4212e0fa3825e031524f4a386e23edae477f31e26b504edb5358510b8cca62e",
+    "bio": "",
+    "currentPost": "",
+    "pastWork": [],
+    "education": []
+}
+
+###
+
+GET http://localhost:9090/user/get_all_users HTTP/1.1
+Content-Type: application/json
+
+{}
